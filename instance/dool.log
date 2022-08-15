@@ -1,0 +1,13 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 489-018-166
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /cdn/2f686f6d652f632f436f64652f6769746875622f7a746f5f71725f7365727665722f313636303537393335353337393935353535393139322e3136382e322e31352e6a7067 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /cdn/2f686f6d652f632f436f64652f6769746875622f7a746f5f71725f7365727665722f313636303537393833323131343538363134363139322e3136382e322e31352e6a7067 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /cdn/2f686f6d652f632f436f64652f6769746875622f7a746f5f71725f7365727665722f6d795152634f44452e6a7067 HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/c/Code/github/tFlask-Image-Gallery/app.py', reloading
+INFO:werkzeug: * Restarting with stat

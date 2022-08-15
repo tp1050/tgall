@@ -8,10 +8,22 @@ import glob
 import sys
 import binascii
 import argparse
+import logging
+from pathlib import Path
+
+class Flask_Config:
+    instance_relative_config = True
+    IMAGE_EXTS = [".png", ".jpg", ".jpeg", ".gif", ".tiff"]
+    SERVER_NAME='192.168.2.66:8700'
 
 
-app = Flask("Flask Image Gallery",instance_relative_config=True)
-app.config['IMAGE_EXTS'] = [".png", ".jpg", ".jpeg", ".gif", ".tiff"]
+
+app = Flask("Flask jhcf;")
+app.config.from_object(Flask_Config)
+
+app.config["loggger_file"] = Path(app.instance_path, 'dool.log' )
+app.config["QR_LIB"]=Path(app.instance_path, '/qrs' )
+logging.basicConfig(filename=app.config["loggger_file"], level=logging.DEBUG, force=True)
 
 
 def encode(x):
@@ -25,7 +37,7 @@ def decode(x):
 
 @app.route('/')
 def home():
-    root_dir = app.config['ROOT_DIR']
+    root_dir = app.config['QR_LIB']
     image_paths = []
     for root,dirs,files in os.walk(root_dir):
         for file in files:
@@ -41,12 +53,13 @@ def download_file(filepath):
 
 
 if __name__=="__main__":
-    parser = argparse.ArgumentParser('Usage: %prog [options]')
-    parser.add_argument('root_dir', help='Gallery root directory path')
-    parser.add_argument('-l', '--listen', dest='host', default='127.0.0.1', \
-                                    help='address to listen on [127.0.0.1]')
-    parser.add_argument('-p', '--port', metavar='PORT', dest='port', type=int, \
-                                default=5000, help='port to listen on [5000]')
-    args = parser.parse_args()
-    app.config['ROOT_DIR'] = args.root_dir
-    app.run(host=args.host, port=args.port, debug=True)
+    app.run()
+    # parser = argparse.ArgumentParser('Usage: %prog [options]')
+    # parser.add_argument('root_dir', help='Gallery root directory path')
+    # parser.add_argument('-l', '--listen', dest='host', default='127.0.0.1', \
+    #                                 help='address to listen on [127.0.0.1]')
+    # parser.add_argument('-p', '--port', metavar='PORT', dest='port', type=int, \
+    #                             default=5000, help='port to listen on [5000]')
+    # args = parser.parse_args()
+    # app.config['ROOT_DIR'] = args.root_dir
+    # app.run(host=args.host, port=args.port, debug=True)
