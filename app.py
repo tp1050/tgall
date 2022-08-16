@@ -10,16 +10,13 @@ import binascii
 import argparse
 import logging
 from pathlib import Path
-
-class Flask_Config:
-    instance_relative_config = True
-    IMAGE_EXTS = [".png", ".jpg", ".jpeg", ".gif", ".tiff"]
-    SERVER_NAME='192.168.2.66:8700'
+from conf import Flask_conf1
 
 
 
-app = Flask("Flask jhcf;")
-app.config.from_object(Flask_Config)
+
+app = Flask("Zortom")
+app.config.update(Flask_conf1().sandoghech())
 
 app.config["loggger_file"] = Path(app.instance_path, 'dool.log' )
 app.config["QR_LIB"]=Path(app.instance_path, '/qrs' )
@@ -37,12 +34,13 @@ def decode(x):
 
 @app.route('/')
 def home():
+    from koon import get_pic_paths
     root_dir = app.config['QR_LIB']
-    image_paths = []
-    for root,dirs,files in os.walk(root_dir):
-        for file in files:
-            if any(file.endswith(ext) for ext in app.config['IMAGE_EXTS']):
-                image_paths.append(encode(os.path.join(root,file)))
+    image_paths = get_pic_paths(root_dir, app.config["IMAGE_EXTS"])
+    # for root,dirs,files in os.walk(root_dir):
+    #     for file in files:
+    #         if any(file.endswith(ext) for ext in app.config['IMAGE_EXTS']):
+                # image_paths.append(encode(os.path.join(root,file)))
     return render_template('index.html', paths=image_paths)
 
 

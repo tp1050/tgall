@@ -11,3 +11,4 @@ INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /cdn/2f686f6d652f63
 INFO:werkzeug:127.0.0.1 - - [16/Aug/2022 00:41:12] "[36mGET /cdn/2f686f6d652f632f436f64652f6769746875622f7a746f5f71725f7365727665722f6d795152634f44452e6a7067 HTTP/1.1[0m" 304 -
 INFO:werkzeug: * Detected change in '/home/c/Code/github/tFlask-Image-Gallery/app.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://192.168.5.2:8456 (Press CTRL+C to quit)
