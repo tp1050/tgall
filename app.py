@@ -9,7 +9,7 @@ from conf import Conf1
 from helper import tprint
 from flask import session
 from datetime import datetime
-
+from time import time_ns as ns
 now=datetime.now
 
 
@@ -52,11 +52,14 @@ def home():
     from koon import get_pic_paths1
     image_paths = encode(get_pic_paths1(app.config['QR_LIB'], app.config["IMAGE_EXTS"]))
     import random
-    session['img_path']={}
+    image_path_dict={}
+
 
     for img in image_paths:
-        session['img_paths'].update(str(random.random()),img)
-    d=session.img_paths.keys()
+        image_path_dict[str(ns())]=img
+    d=image_path_dict.keys()
+    session['image_path_dict']=image_path_dict
+
     return render_template('index.html', paths=d)
 
 
@@ -64,7 +67,7 @@ def home():
 def download_file(filepath):
     from flask import send_file
     print(type(filepath))
-    filepath1 = session.img_path[filepath]
+    filepath1 = session['image_path_dict'].get(filepath)
     filename = decode(filepath1)
     if Path(app.instance_path, 'qrs', filename).exists():
         return send_file(Path(app.instance_path, 'qrs', filename), as_attachment = False)
