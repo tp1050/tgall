@@ -1,63 +1,77 @@
 
 from flask import Flask
-from flask import request
 from flask import render_template
-from flask import send_from_directory
 import os
-import glob
-import sys
 import binascii
-import argparse
 import logging
 from pathlib import Path
-from conf import Flask_conf1
+from conf import Conf1
+from helper import tprint
+from flask import session
+from datetime import datetime
+
+now=datetime.now
 
 
 
-
-app = Flask("Zortom")
-app.config.update(Flask_conf1().sandoghech())
+app = Flask("Zortom",instance_relative_config = True)
+try:
+    os.makedirs(app.instance_path)
+except OSError:
+    pass
+app.config.from_object(Conf1())
 
 app.config["loggger_file"] = Path(app.instance_path, 'dool.log' )
-app.config["QR_LIB"]=Path(app.instance_path, '/qrs' )
+app.config["QR_LIB"]=Path(app.instance_path, 'qrs' )
+tprint(app.config["QR_LIB"])
 logging.basicConfig(filename=app.config["loggger_file"], level=logging.DEBUG, force=True)
 
 
 def encode(x):
-    # return x
-    return binascii.hexlify(x.encode('utf-8')).decode()
+    ret=[]
+    if isinstance(x,list):
+        for i in x:
+            ret.append(encode(i))
+    else:
+        ret=binascii.hexlify(x.encode('utf-8')).decode()
+    return ret
 
 def decode(x):
     # return x
-    return binascii.unhexlify(x.encode('utf-8')).decode()
+    ret='khiloo.jpg'
+    try:
+        ret=binascii.unhexlify(x.encode('utf-8')).decode()
+    except:
+        pass
+
+    return ret
 
 
 @app.route('/')
 def home():
-    from koon import get_pic_paths
-    root_dir = app.config['QR_LIB']
-    image_paths = get_pic_paths(root_dir, app.config["IMAGE_EXTS"])
-    # for root,dirs,files in os.walk(root_dir):
-    #     for file in files:
-    #         if any(file.endswith(ext) for ext in app.config['IMAGE_EXTS']):
-                # image_paths.append(encode(os.path.join(root,file)))
-    return render_template('index.html', paths=image_paths)
+    from koon import get_pic_paths1
+    image_paths = encode(get_pic_paths1(app.config['QR_LIB'], app.config["IMAGE_EXTS"]))
+    import random
+    session['img_path']={}
+
+    for img in image_paths:
+        session['img_paths'].update(str(random.random()),img)
+    d=session.img_paths.keys()
+    return render_template('index.html', paths=d)
 
 
 @app.route('/cdn/<path:filepath>')
 def download_file(filepath):
-    dir,filename = os.path.split(decode(filepath))
-    return send_from_directory(dir, filename, as_attachment=False)
+    from flask import send_file
+    print(type(filepath))
+    filepath1 = session.img_path[filepath]
+    filename = decode(filepath1)
+    if Path(app.instance_path, 'qrs', filename).exists():
+        return send_file(Path(app.instance_path, 'qrs', filename), as_attachment = False)
+    else:
+        return send_file(Path(app.instance_path,'qrs/404', 'result.jpg'), as_attachment=False)
 
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     app.run()
-    # parser = argparse.ArgumentParser('Usage: %prog [options]')
-    # parser.add_argument('root_dir', help='Gallery root directory path')
-    # parser.add_argument('-l', '--listen', dest='host', default='127.0.0.1', \
-    #                                 help='address to listen on [127.0.0.1]')
-    # parser.add_argument('-p', '--port', metavar='PORT', dest='port', type=int, \
-    #                             default=5000, help='port to listen on [5000]')
-    # args = parser.parse_args()
-    # app.config['ROOT_DIR'] = args.root_dir
-    # app.run(host=args.host, port=args.port, debug=True)

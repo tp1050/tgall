@@ -1,18 +1,28 @@
 # from conf import Flask_Config
 from pathlib import Path
-# from app import encode
-conf_extensions =[] #Flask_Config().IMAGE_EXTS
+from helper import tprint
 
-def get_pic_paths(instance_path = Path.home(),extensions = conf_extensions):
+
+
+def get_pic_paths(instance_path = Path.home(),extensions =[]):
+    tprint(locals())
+    import glob
+    import conf
+    conf_extensions =extensions
+    img_list=[]
+    for ext in extensions :
+        files=glob.glob(f"{instance_path}/{ext}")
+
+        for file in files:
+            img_list.append(str(Path(instance_path,file)))
+    tprint(img_list)
+    return img_list
+def get_pic_paths1(instance_path = Path.home(),extensions =[]):
     import glob
     img_list=[]
-    # for ext in extensions :
-    #     files=glob.glob(f"{instance_path}/*{ext}")
-    #
-    #     for file in files:
-    #         img_list.append(Path(instance_path,file))
+    for ext in extensions :
+        img_list=img_list+glob.glob(f"{instance_path}/{ext}")
     return img_list
-
 
 # il=get_pic_paths('/home/c/Code/github/tFlask-Image-Gallery/instance/qrs',['.jpg'])
 #
