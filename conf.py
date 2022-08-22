@@ -13,9 +13,9 @@ from helper import tprint, disp
 class Flask_Config:
     def __init__(self,**kwargs):
         # self._sandogh = {}
+        print(kwargs)
         self.__dict__.update(kwargs)
     def __getattr__(self, name):
-        print('processing')
         return self.__dict__.get(name,None)
     def __setattr__(self, name, value):
         self.__dict__[name]=value
@@ -23,11 +23,10 @@ class Flask_Config:
 
 
 class Conf1(Flask_Config):
-    def __init__(self):
+    def __init__(self,**kwargs):
         from koon import lan_ip
-        super().__init__(instance_relative_config = True, IMAGE_EXTS = ["*.png", "*.jpg", "*.jpeg","*.gif", "*.tiff"],SERVER_NAME=f"{lan_ip()}:8457",SECRET_KEY='12345678')
-
-#
+        super().__init__(INSTANCE_RELATIVE_CONFIG = True, IMAGE_EXTS = ["*.png", "*.jpg", "*.jpeg","*.gif", "*.tiff"],SERVER_IP=lan_ip(),SERVER_NAME="7270.dool.dool:8989",SECRET_KEY='12345678')
+        self.__dict__.update(kwargs)
 #
 # class Flask_Config2:
 #     def __init__(self,**kwargs):

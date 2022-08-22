@@ -1,17 +1,7 @@
-INFO:werkzeug: * Running on http://192.168.0.159:8457 (Press CTRL+C to quit)
-ERROR:Zortom:Exception on / [GET]
-Traceback (most recent call last):
-  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "app.py", line 58, in home
-    session['img_paths'].update(str(ns()),img)
-  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/sessions.py", line 79, in __getitem__
-    return super().__getitem__(key)
-KeyError: 'img_paths'
-INFO:werkzeug:192.168.0.159 - - [18/Aug/2022 23:35:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET /cdn/1661179693301775040 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET /cdn/1661179693301787887 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET /cdn/1661179693301792329 HTTP/1.1" 200 -

@@ -19,12 +19,15 @@ try:
     os.makedirs(app.instance_path)
 except OSError:
     pass
-app.config.from_object(Conf1())
+patoo=str(Path(app.instance_path, 'dool.log' ))
+c=Conf1(LOGGER_FILE= patoo,QR_LIB=str(Path(app.instance_path, 'qrs' )))
 
-app.config["loggger_file"] = Path(app.instance_path, 'dool.log' )
-app.config["QR_LIB"]=Path(app.instance_path, 'qrs' )
+app.config.from_object(c)
+
+# app.config["loggger_file"] = Path(app.instance_path, 'dool.log' )
+# app.config["QR_LIB"]=Path(app.instance_path, 'qrs' )
 tprint(app.config["QR_LIB"])
-logging.basicConfig(filename=app.config["loggger_file"], level=logging.DEBUG, force=True)
+logging.basicConfig(filename=app.config['LOGGER_FILE'], level=logging.DEBUG, force=True)
 
 
 def encode(x):
