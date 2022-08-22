@@ -1,7 +1,158 @@
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "[33mGET /blah HTTP/1.1[0m" 404 -
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET /cdn/1661179693301775040 HTTP/1.1" 200 -
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET /cdn/1661179693301787887 HTTP/1.1" 200 -
-INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 19:18:13] "GET /cdn/1661179693301792329 HTTP/1.1" 200 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.34788718492086423', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "GET /cdn/1661195401520309644 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "GET /cdn/1661195401520314371 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:01] "GET /cdn/1661195401520315490 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "[36mGET /cdn/1661195401520315490 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "[36mGET /cdn/1661195401520309644 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:11] "[36mGET /cdn/1661195401520314371 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "[36mGET /cdn/1661195401520309644 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "[36mGET /cdn/1661195401520314371 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:12] "[36mGET /cdn/1661195401520315490 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:28] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:28] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:28] "[36mGET /cdn/1661195401520309644 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:28] "[36mGET /cdn/1661195401520314371 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:28] "[36mGET /cdn/1661195401520315490 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "[36mGET /cdn/1661195401520309644 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "[36mGET /cdn/1661195401520314371 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:40:31] "[36mGET /cdn/1661195401520315490 HTTP/1.1[0m" 304 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.29715943059142913', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:06] "[33mGET /vc/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "GET /cdn/1661195470514477754 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "GET /cdn/1661195470514472282 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:10] "GET /cdn/1661195470514479316 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [22/Aug/2022 23:41:12] "GET / HTTP/1.1" 200 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.7077335327094719', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.9966624332076442', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "GET /cdn/1661197079387064890 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "GET /cdn/1661197079387062600 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:07:59] "GET /cdn/1661197079387065679 HTTP/1.1" 200 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.27879756158628344', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+ERROR:Zortom:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 35, in home
+    image_paths = get_pic_paths1(app.config['QR_LIB'], app.config["IMAGE_EXTS"],froamt='dic')
+TypeError: get_pic_paths1() got an unexpected keyword argument 'froamt'
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:22:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:Zortom:Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 35, in home
+    image_paths = get_pic_paths1(app.config['QR_LIB'], app.config["IMAGE_EXTS"],froamt='dic')
+TypeError: get_pic_paths1() got an unexpected keyword argument 'froamt'
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:25:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.5674153188573323', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "GET /cdn/0.2599511293248219 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "GET /cdn/0.6935392879143408 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:27:09] "GET /cdn/0.7114446966550213 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "[36mGET /cdn/0.2599511293248219 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "[36mGET /cdn/0.6935392879143408 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:14] "[36mGET /cdn/0.7114446966550213 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "[36mGET /cdn/0.7114446966550213 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "[36mGET /cdn/0.6935392879143408 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 00:31:16] "[36mGET /cdn/0.2599511293248219 HTTP/1.1[0m" 304 -
+INFO:werkzeug:94.182.207.42 - - [23/Aug/2022 00:36:09] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:94.182.207.42 - - [23/Aug/2022 00:36:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.433925301534554', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.159', 'SESSION_PERMANENT': False}>
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.49783578523563077', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.2639774648533669', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+ERROR:Zortom:Exception on /qrIP [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/Shell/Conf1/vconf1/lib/python3.8/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 68, in qrIP
+    file_name=dool_qr(data=ip).save()
+  File "/home/c/Code/github/tFlask-Image-Gallery/qr_cls.py", line 15, in save
+    self.img.save(Path(self.path,self.file_name))
+  File "/usr/lib/python3.8/pathlib.py", line 1042, in __new__
+    self = cls._from_parts(args, init=False)
+  File "/usr/lib/python3.8/pathlib.py", line 683, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.8/pathlib.py", line 667, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:07:09] "[35m[1mGET /qrIP HTTP/1.1[0m" 500 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.37255729225678913', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:08:35] "GET /qrIP HTTP/1.1" 200 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'PRESERVE_CONTEXT_ON_EXCEPTION': None, 'SECRET_KEY': '0.054221759987884144', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': True, 'JSON_SORT_KEYS': True, 'JSONIFY_PRETTYPRINT_REGULAR': False, 'JSONIFY_MIMETYPE': 'application/json', 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug: * Running on http://7270.dool.dool:8989 (Press CTRL+C to quit)
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:09:37] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:09:41] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "GET /cdn/0.12877371707201346 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "GET /cdn/0.7575795150653151 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "GET /cdn/0.13905228075050924 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "GET /cdn/0.17855091999010508 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [23/Aug/2022 01:10:55] "GET /cdn/0.6723916267611917 HTTP/1.1" 200 -

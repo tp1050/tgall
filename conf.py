@@ -20,12 +20,12 @@ class Flask_Config:
     def __setattr__(self, name, value):
         self.__dict__[name]=value
 
-
+import random
 
 class Conf1(Flask_Config):
     def __init__(self,**kwargs):
         from koon import lan_ip
-        super().__init__(INSTANCE_RELATIVE_CONFIG = True, IMAGE_EXTS = ["*.png", "*.jpg", "*.jpeg","*.gif", "*.tiff"],SERVER_IP=lan_ip(),SERVER_NAME="7270.dool.dool:8989",SECRET_KEY='12345678')
+        super().__init__(INSTANCE_RELATIVE_CONFIG = True, IMAGE_EXTS = ["*.png", "*.jpg", "*.jpeg","*.gif", "*.tiff"],SERVER_IP=lan_ip(),SERVER_NAME="7270.dool.dool:8989",SECRET_KEY=str(random.random()),SESSION_PERMANENT=False)
         self.__dict__.update(kwargs)
 #
 # class Flask_Config2:

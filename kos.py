@@ -30,7 +30,9 @@ app = Flask("Bacon")
 app.config.from_object(Conf1())
 
 
-
+@app.before_request
+def setup():
+    session.permanent = False
 @app.route('/')
 def index():
     session['data']=921284053349526
@@ -43,7 +45,7 @@ def test():
 
 from flask import Flask, render_template, request, redirect,url_for, flash, make_response, session
 
-@app.route('/visits-counter/')
+@app.route('/vc/')
 def visits():
     if 'visits' in session:
         session['visits'] = session.get('visits') + 1  # reading and updating session data
@@ -51,7 +53,7 @@ def visits():
         session['visits'] = 1 # setting session data
     return "Total visits: {}".format(session.get('visits'))
 
-@app.route('/delete-visits/')
+@app.route('/dv/')
 def delete_visits():
     session.pop('visits', None) # delete visits
     return 'Visits deleted'
