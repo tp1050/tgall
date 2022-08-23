@@ -43,6 +43,11 @@ def home():
         return render_template('index.html', paths=d)
 
 
+@app.route('/refresh')
+def refresh():
+    if "image_paths_dict" in session:
+        session.pop("image_paths_dict")
+    return "refresh"
 
 
 @app.route('/cdn/<path:filepath>')
