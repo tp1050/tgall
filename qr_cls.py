@@ -10,7 +10,7 @@ def create_image(w,h,text):
     my_image = Image.new('RGB',(h,w))
     image_editable = ImageDraw.Draw(my_image)
     font = ImageFont.truetype(r'instance/times.ttf',10)
-    image_editable.text( (1,1),text=text,font=font)
+    image_editable.text( (0,0),text,(255,255,255),font=font)
     return my_image
 def concat_text(img_src,data):
     w,h=img_src.size
