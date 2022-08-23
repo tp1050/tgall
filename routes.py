@@ -7,6 +7,7 @@ from flask import session
 from app import app
 
 
+
 @app.route('/')
 def home():
     if "image_paths_dict" not in session:
@@ -39,6 +40,7 @@ def download_file(filepath):
     else:
         return send_file(Path(app.instance_path,'qrs/404', 'result.jpg'), as_attachment=False)
 
+@login_required
 @app.route('/qrIP', methods=['GET','POST'])
 def qrIP():
     from flask import send_file
