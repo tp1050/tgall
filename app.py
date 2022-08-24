@@ -6,18 +6,17 @@ import binascii
 import logging
 from pathlib import Path
 import pathlib
-from conf import Conf1
+from classes.conf import Conf1
 from helper import tprint
 from flask import session
 from datetime import datetime
 from time import time_ns as ns
 now=datetime.now
 from flask import request
-import qr_cls
+import classes.qr_cls
 
 
-from flask.ext.login import LoginManager
-login_manager = LoginManager()
+# login_manager = LoginManager()
 
 app = Flask("Zortom",instance_relative_config = True)
 try:
@@ -30,7 +29,7 @@ app.config.from_object(c)
 
 logging.basicConfig(filename=app.config['LOGGER_FILE'], level=logging.DEBUG,force=True)
 logging.info(app.config)
-login_manager.init_app(app)
+# login_manager.init_app(app)
 
 from routes import *
 

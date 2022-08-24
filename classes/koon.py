@@ -7,7 +7,7 @@ from helper import tprint
 def get_pic_paths(instance_path = Path.home(),extensions =[]):
     tprint(locals())
     import glob
-    import conf
+    import classes.conf
     conf_extensions =extensions
     img_list=[]
     for ext in extensions :

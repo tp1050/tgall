@@ -24,7 +24,7 @@ import random
 
 class Conf1(Flask_Config):
     def __init__(self,**kwargs):
-        from koon import lan_ip
+        from classes.koon import lan_ip
         super().__init__(INSTANCE_RELATIVE_CONFIG = True, IMAGE_EXTS = ["*.png", "*.jpg", "*.jpeg","*.gif", "*.tiff"],SERVER_IP=lan_ip(),SERVER_NAME="7270.dool.dool:8989",SECRET_KEY=str(random.random()),SESSION_PERMANENT=False)
         self.__dict__.update(kwargs)
 #

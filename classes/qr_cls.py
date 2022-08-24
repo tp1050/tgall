@@ -1,7 +1,7 @@
 import qrcode
 import time
 from pathlib import Path
-from PIL import Image, ImageFont, ImageDraw
+from PIL import Image, ImageFont, ImageDraw2
 
 
 
@@ -9,8 +9,8 @@ def create_image(w,h,text):
     from PIL import Image, ImageFont, ImageDraw
     my_image = Image.new('RGB',(h,w))
     image_editable = ImageDraw.Draw(my_image)
-    font = ImageFont.truetype(r'instance/times.ttf',10)
-    image_editable.text( (0,0),text,(255,255,255),font=font)
+    font = ImageFont.truetype(r'instance/times.ttf')
+    image_editable.text( (0,0),text)
     return my_image
 def concat_text(img_src,data):
     w,h=img_src.size

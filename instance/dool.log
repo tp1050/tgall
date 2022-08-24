@@ -1,0 +1,743 @@
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '0.4696142034025952', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '0.0652089466900897', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://7270.dool.dool:8989
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+ERROR:Zortom:Exception on /qrIP [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 57, in qrIP
+    session['image_paths_dict'][random.random()]=pic_path
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/sessions.py", line 80, in __getitem__
+    return super().__getitem__(key)
+KeyError: 'image_paths_dict'
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:10] "[35m[1mGET /qrIP HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.8477024221044505 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.42047111744793186 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.1941333860415425 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.3463164254457419 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.637301114143928 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.09135948793688375 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.415656282441234 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.536633625826189 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.7284928598608581 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.5816399537883933 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.3013319278593596 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.7879591228944642 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.0773644020520009 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.6034893710674414 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.7606368101569867 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.3894947434246516 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.645214733566027 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.27721514699447236 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.3949093903574935 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.8847034110047263 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.07186687687753013 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.9480110549850417 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.5327776633804716 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.44649571653007125 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.17815300546489077 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.26632851856865447 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.3866629320964514 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:34] "GET /cdn/0.9863051463884382 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:35] "GET /cdn/0.9131257141990328 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:35] "GET /cdn/0.30964078316041277 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:35] "GET /cdn/0.21313032419867406 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:35] "GET /cdn/0.46724191243065494 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:35] "GET /cdn/0.9392903607660333 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:35] "GET /cdn/0.03818542852455975 HTTP/1.1" 200 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.03818542852455975 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.07186687687753013 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.0773644020520009 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.09135948793688375 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.17815300546489077 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.1941333860415425 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.21313032419867406 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.27721514699447236 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.26632851856865447 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.3866629320964514 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.3894947434246516 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.30964078316041277 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.3013319278593596 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.3463164254457419 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.3949093903574935 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.415656282441234 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.42047111744793186 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.44649571653007125 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.46724191243065494 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.5327776633804716 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.5816399537883933 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.637301114143928 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.536633625826189 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.6034893710674414 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.645214733566027 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.7284928598608581 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.7879591228944642 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.8477024221044505 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.7606368101569867 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.8847034110047263 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.9131257141990328 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.9392903607660333 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.9480110549850417 HTTP/1.1[0m" 304 -
+ERROR:Zortom:Exception on /cdn/0.6394724928131201 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[36mGET /cdn/0.9863051463884382 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:41] "[35m[1mGET /cdn/0.6394724928131201 HTTP/1.1[0m" 500 -
+ERROR:Zortom:Exception on /cdn/0.6394724928131201 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:50] "[35m[1mGET /cdn/0.6394724928131201 HTTP/1.1[0m" 500 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.03818542852455975 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.07186687687753013 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.0773644020520009 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.09135948793688375 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.17815300546489077 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.1941333860415425 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.21313032419867406 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.27721514699447236 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.26632851856865447 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.3463164254457419 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.30964078316041277 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.3013319278593596 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.3866629320964514 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.3949093903574935 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.3894947434246516 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.42047111744793186 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.415656282441234 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.44649571653007125 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.46724191243065494 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.5327776633804716 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.6034893710674414 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.536633625826189 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.5816399537883933 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.637301114143928 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.645214733566027 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.7284928598608581 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.7606368101569867 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.7879591228944642 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.8477024221044505 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.8847034110047263 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.9392903607660333 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.9131257141990328 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.9480110549850417 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[36mGET /cdn/0.9863051463884382 HTTP/1.1[0m" 304 -
+ERROR:Zortom:Exception on /cdn/0.8692292955253327 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:04:55] "[35m[1mGET /cdn/0.8692292955253327 HTTP/1.1[0m" 500 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.03818542852455975 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.07186687687753013 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.0773644020520009 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.09135948793688375 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.17815300546489077 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.21313032419867406 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.1941333860415425 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.26632851856865447 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.27721514699447236 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.3013319278593596 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.30964078316041277 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.3463164254457419 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.3866629320964514 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.3894947434246516 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.3949093903574935 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.415656282441234 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.42047111744793186 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.44649571653007125 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.46724191243065494 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.5327776633804716 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.536633625826189 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.5816399537883933 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.645214733566027 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.637301114143928 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.6034893710674414 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.7606368101569867 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.7284928598608581 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.8477024221044505 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.7879591228944642 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.8847034110047263 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.9131257141990328 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.9392903607660333 HTTP/1.1[0m" 304 -
+ERROR:Zortom:Exception on /cdn/0.5822918223940577 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[35m[1mGET /cdn/0.5822918223940577 HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.9480110549850417 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:39] "[36mGET /cdn/0.9863051463884382 HTTP/1.1[0m" 304 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.03818542852455975 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.07186687687753013 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.09135948793688375 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.17815300546489077 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.0773644020520009 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.1941333860415425 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.21313032419867406 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:42] "[36mGET /cdn/0.26632851856865447 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.27721514699447236 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.30964078316041277 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.3013319278593596 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.3463164254457419 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.3866629320964514 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.3894947434246516 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.3949093903574935 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.415656282441234 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.42047111744793186 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.44649571653007125 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.46724191243065494 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.5327776633804716 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.536633625826189 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.5816399537883933 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.6034893710674414 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.637301114143928 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.645214733566027 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.7284928598608581 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.7606368101569867 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.7879591228944642 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.8477024221044505 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.8847034110047263 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.9131257141990328 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.9392903607660333 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.9480110549850417 HTTP/1.1[0m" 304 -
+ERROR:Zortom:Exception on /cdn/0.14930327698316903 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[36mGET /cdn/0.9863051463884382 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:43] "[35m[1mGET /cdn/0.14930327698316903 HTTP/1.1[0m" 500 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.03818542852455975 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.17815300546489077 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.09135948793688375 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.0773644020520009 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.07186687687753013 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.1941333860415425 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.21313032419867406 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.26632851856865447 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.27721514699447236 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.3013319278593596 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.30964078316041277 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.3463164254457419 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.3866629320964514 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.3949093903574935 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.3894947434246516 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.415656282441234 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.42047111744793186 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.46724191243065494 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.44649571653007125 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.5327776633804716 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.637301114143928 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.5816399537883933 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.536633625826189 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.6034893710674414 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.7606368101569867 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.7284928598608581 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.645214733566027 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.7879591228944642 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.8477024221044505 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:48] "GET /cdn/0.8847034110047263 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:49] "GET /cdn/0.9392903607660333 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:49] "GET /cdn/0.9131257141990328 HTTP/1.1" 200 -
+ERROR:Zortom:Exception on /cdn/0.9629233312116442 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:49] "GET /cdn/0.9480110549850417 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:49] "[35m[1mGET /cdn/0.9629233312116442 HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:49] "GET /cdn/0.9863051463884382 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.07186687687753013 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.0773644020520009 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.03818542852455975 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.09135948793688375 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.17815300546489077 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.26632851856865447 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.1941333860415425 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.21313032419867406 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.27721514699447236 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3013319278593596 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.30964078316041277 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3866629320964514 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3463164254457419 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3949093903574935 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3894947434246516 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.415656282441234 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.42047111744793186 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.44649571653007125 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.46724191243065494 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.536633625826189 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.5816399537883933 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.6034893710674414 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.5327776633804716 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.637301114143928 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.645214733566027 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.7284928598608581 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.7606368101569867 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.7879591228944642 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.8477024221044505 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.8847034110047263 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.9392903607660333 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.9131257141990328 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.9480110549850417 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.9863051463884382 HTTP/1.1" 200 -
+ERROR:Zortom:Exception on /cdn/0.29976641182883834 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "[35m[1mGET /cdn/0.29976641182883834 HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.03818542852455975 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.07186687687753013 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.0773644020520009 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.17815300546489077 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.09135948793688375 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.1941333860415425 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.21313032419867406 HTTP/1.1" 200 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.26632851856865447 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.27721514699447236 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3013319278593596 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.30964078316041277 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3866629320964514 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:50] "GET /cdn/0.3463164254457419 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3949093903574935 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3894947434246516 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.415656282441234 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.42047111744793186 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.44649571653007125 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.46724191243065494 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.5327776633804716 HTTP/1.1" 200 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /static/style.css HTTP/1.1" 200 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.07186687687753013 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.03818542852455975 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.0773644020520009 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.09135948793688375 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.1941333860415425 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.17815300546489077 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /static/script.js HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.03818542852455975 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.0773644020520009 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.07186687687753013 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.09135948793688375 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.17815300546489077 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.1941333860415425 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.21313032419867406 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.26632851856865447 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.27721514699447236 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3013319278593596 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.30964078316041277 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3866629320964514 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3463164254457419 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3894947434246516 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.3949093903574935 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.415656282441234 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.42047111744793186 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.44649571653007125 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.46724191243065494 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.5327776633804716 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.536633625826189 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.5816399537883933 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.637301114143928 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.6034893710674414 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.645214733566027 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.7606368101569867 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.7284928598608581 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.7879591228944642 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.8477024221044505 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.9131257141990328 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.8847034110047263 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.9392903607660333 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.9480110549850417 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "GET /cdn/0.9863051463884382 HTTP/1.1" 200 -
+ERROR:Zortom:Exception on /cdn/0.6363474734575806 [GET]
+Traceback (most recent call last):
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/c/Code/VConf310/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/c/Code/github/tFlask-Image-Gallery/routes.py", line 40, in download_file
+    if Path(app.instance_path, 'qrs', filename).exists():
+  File "/usr/lib/python3.10/pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "/usr/lib/python3.10/pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/usr/lib/python3.10/pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "[35m[1mGET /cdn/0.6363474734575806 HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:05:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.03818542852455975 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.17815300546489077 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.07186687687753013 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.0773644020520009 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.09135948793688375 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.46724191243065494 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.3866629320964514 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.21313032419867406 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.415656282441234 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.3894947434246516 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.3949093903574935 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.44649571653007125 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.536633625826189 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.26632851856865447 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.5327776633804716 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.3013319278593596 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.1941333860415425 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.42047111744793186 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.27721514699447236 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.30964078316041277 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.3463164254457419 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.7879591228944642 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.637301114143928 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.6034893710674414 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.645214733566027 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.7284928598608581 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.7606368101569867 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.5816399537883933 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.8847034110047263 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.8477024221044505 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.9131257141990328 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.9863051463884382 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.9480110549850417 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:06:00] "[36mGET /cdn/0.9392903607660333 HTTP/1.1[0m" 304 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '0.707584738005179', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '0.12329778721925888', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://7270.dool.dool:8989
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.8622563773813803 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7799843468726647 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.9595713500224263 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7947806267667802 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.2992459350883586 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.3321085181349531 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.3109181567688122 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.9808854680876371 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7711736331263731 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.0344579163594424 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.3626442661987883 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.026037561065669124 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.4268982177781915 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.1379924553336701 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.569437726153554 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.9329941110230842 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.3905070313543242 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.00831499623525045 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.6958935873519562 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7045593996628355 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7304645779230239 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.6847633985434747 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.81958951929042 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.5411735559051922 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.13894715279140424 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7938907803794729 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.4973697278089113 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.013866515408014646 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.7240632045643821 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.5988425130552538 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.6001588144692098 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.16951802589082443 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.4503073710176302 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:12] "GET /cdn/0.5054681888428615 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.8137880040832888 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.009013508485977595 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.8378836051278203 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.5822340118183021 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.9104181832694322 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.4333945909890522 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.26203424405238374 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.5958453946392106 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.26821642449017935 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:13] "GET /cdn/0.6675192871103947 HTTP/1.1" 200 -
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 41 1216
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:09:17] "GET /qrIP HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.00831499623525045 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.009013508485977595 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.026037561065669124 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.13894715279140424 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.0344579163594424 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.16951802589082443 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.013866515408014646 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.1379924553336701 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.26203424405238374 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.26821642449017935 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.2992459350883586 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:17] "[36mGET /cdn/0.3109181567688122 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.3321085181349531 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.3626442661987883 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.4268982177781915 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.3905070313543242 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.4333945909890522 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.4503073710176302 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.4973697278089113 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.5054681888428615 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.5411735559051922 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.5822340118183021 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.569437726153554 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.5958453946392106 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.5988425130552538 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.6001588144692098 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.6675192871103947 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.6958935873519562 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.6847633985434747 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7045593996628355 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7240632045643821 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7304645779230239 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7711736331263731 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7799843468726647 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7938907803794729 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.7947806267667802 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.8137880040832888 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.81958951929042 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.8622563773813803 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.8378836051278203 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.9104181832694322 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.9329941110230842 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.9595713500224263 HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:10:18] "[36mGET /cdn/0.9808854680876371 HTTP/1.1[0m" 304 -
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '0.2719029053986224', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:root:<Config {'ENV': 'production', 'DEBUG': False, 'TESTING': False, 'PROPAGATE_EXCEPTIONS': None, 'SECRET_KEY': '0.3650616211867631', 'PERMANENT_SESSION_LIFETIME': datetime.timedelta(days=31), 'USE_X_SENDFILE': False, 'SERVER_NAME': '7270.dool.dool:8989', 'APPLICATION_ROOT': '/', 'SESSION_COOKIE_NAME': 'session', 'SESSION_COOKIE_DOMAIN': None, 'SESSION_COOKIE_PATH': None, 'SESSION_COOKIE_HTTPONLY': True, 'SESSION_COOKIE_SECURE': False, 'SESSION_COOKIE_SAMESITE': None, 'SESSION_REFRESH_EACH_REQUEST': True, 'MAX_CONTENT_LENGTH': None, 'SEND_FILE_MAX_AGE_DEFAULT': None, 'TRAP_BAD_REQUEST_ERRORS': None, 'TRAP_HTTP_EXCEPTIONS': False, 'EXPLAIN_TEMPLATE_LOADING': False, 'PREFERRED_URL_SCHEME': 'http', 'JSON_AS_ASCII': None, 'JSON_SORT_KEYS': None, 'JSONIFY_PRETTYPRINT_REGULAR': None, 'JSONIFY_MIMETYPE': None, 'TEMPLATES_AUTO_RELOAD': None, 'MAX_COOKIE_SIZE': 4093, 'IMAGE_EXTS': ['*.png', '*.jpg', '*.jpeg', '*.gif', '*.tiff'], 'INSTANCE_RELATIVE_CONFIG': True, 'LOGGER_FILE': '/home/c/Code/github/tFlask-Image-Gallery/instance/dool.log', 'QR_LIB': '/home/c/Code/github/tFlask-Image-Gallery/instance/qrs', 'SERVER_IP': '192.168.5.2', 'SESSION_PERMANENT': False}>
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://7270.dool.dool:8989
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "[33mGET /blah HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "GET /cdn/0.33121808796171615 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "GET /cdn/0.8446403575167336 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "GET /cdn/0.14333682765411948 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "GET /cdn/0.8479088800764372 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:45] "GET /cdn/0.8567406983958734 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.2689365602950705 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.4493144076347658 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.6600058419023288 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5336242876758773 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.6340431324683441 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.2310449261819456 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.30563316972281473 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.6662343823179766 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.3415752628425138 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5228501544409981 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5253676015229026 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.7777364852606797 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.6294646409786403 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.9972668320092201 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.42767131597602226 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.9187316238366922 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.8975695981098599 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5168830014877602 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.7054884742939688 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.6305143848604559 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.354166409505031 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5038813981267127 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.45979602848362167 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.18019431357543159 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.09427781603679908 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.0926236065484114 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5263279825267657 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.7760887699252741 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.4415843614818874 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.7787461576362401 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.3491561553181902 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.9465246694511694 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.8320909076266578 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.9092126754603322 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.7743595396376529 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.6789889148118423 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.1881573339196786 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.44550889803475224 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.27276841701012666 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.5.2 - - [25/Aug/2022 00:11:46] "GET /cdn/0.5302475561647166 HTTP/1.1" 200 -
