@@ -14,7 +14,8 @@ def home():
     """
     Sends back all the QR images in qrs directory
     Uses a dictionary saved in session object for generation of image_urls
-    Closure of browser or 
+    Closure of browser or App restart results in death of session
+    The dictionary :session['image_paths_dict']
     """
     if "image_paths_dict" not in session:
         from classes.koon import get_pic_paths1
@@ -38,9 +39,8 @@ def refresh():
 def download_file(filepath):
 
     if "image_paths_dict" not in session:
-        print("session dead!!")
-    else:
-        filename = session['image_paths_dict'].get(filepath)
+        redirect(url_for('home'))
+    filename = session['image_paths_dict'].get(filepath)
     if Path(app.instance_path, 'qrs', filename).exists():
         return send_file(Path(app.instance_path, 'qrs', filename), as_attachment =False)
     else:
@@ -62,6 +62,3 @@ def qrIP():
     gg[str(random.random())]=pic_path
     session['image_paths_dict']=gg
     return redirect(url_for('home'))
-    # return pic_path
-    # return render_template("index.html",paths=session['image_paths_dict'].keys(),val=session['image_paths_dict'].values())
-    # return send_file(file_name, as_attachment =False)
