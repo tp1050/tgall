@@ -1,5 +1,5 @@
 
-from flask import render_template
+from flask import render_template, redirect,url_for
 from flask import request
 from pathlib import Path
 
@@ -15,13 +15,14 @@ def home():
     if "image_paths_dict" not in session:
         from classes.koon import get_pic_paths1
         image_paths = get_pic_paths1(app.config['QR_LIB'], app.config["IMAGE_EXTS"],format='dic')
-        # d=image_paths.keys()
-        d=session['image_paths_dict']
+
+
         session['image_paths_dict']=image_paths
-        return render_template('index.html', paths=d)
+        d=session['image_paths_dict'].keys()
+        return render_template('index.html', paths=d,val=image_paths.values())
     else:
         d=session["image_paths_dict"].keys()
-        return render_template('index.html', paths=d)
+        return render_template('index.html', paths=d,val=session['image_paths_dict'].values())
 
 
 @app.route('/refresh')
@@ -55,7 +56,10 @@ def qrIP():
     from classes.qr_cls import dool_qr
     file_name=dool_qr(data=ip,path=app.config['QR_LIB']).save()
     pic_path=str(Path(app.instance_path,app.config['QR_LIB'],file_name))
-    session['image_paths_dict'][random.random()]=pic_path
-    return pic_path
-    return render_template("index.html",paths=session['image_paths_dict'])
+    gg=session['image_paths_dict']
+    gg[str(random.random())]=pic_path
+    session['image_paths_dict']=gg
+    return redirect(url_for('home'))
+    # return pic_path
+    # return render_template("index.html",paths=session['image_paths_dict'].keys(),val=session['image_paths_dict'].values())
     # return send_file(file_name, as_attachment =False)

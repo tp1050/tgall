@@ -26,7 +26,7 @@ def get_pic_paths1(instance_path = Path.home(),extensions =[],format="dic"):
         img_list=img_list+glob.glob(f"{instance_path}/{ext}")
 
     for i in img_list:
-        dic[random.random()]=i
+        dic[str(random.random())]=i
     if format=="dic":
         return dic
     else:

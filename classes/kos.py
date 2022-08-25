@@ -61,4 +61,18 @@ def delete_visits():
 
 
 
-app.run()
+# app.run()
+
+import requests
+
+with open('pic1.jpg', 'wb') as handle:
+    response = requests.get(pic_url, stream=True)
+
+    if not response.ok:
+        print(response)
+
+    for block in response.iter_content(1024):
+        if not block:
+            break
+
+        handle.write(block)
