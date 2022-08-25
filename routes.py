@@ -2,7 +2,6 @@
 from flask import render_template, redirect,url_for
 from flask import request
 from pathlib import Path
-
 from flask import session
 from app import app
 from flask import send_file
@@ -12,11 +11,14 @@ import random
 
 @app.route('/')
 def home():
+    """
+    Sends back all the QR images in qrs directory
+    Uses a dictionary saved in session object for generation of image_urls
+    Closure of browser or 
+    """
     if "image_paths_dict" not in session:
         from classes.koon import get_pic_paths1
         image_paths = get_pic_paths1(app.config['QR_LIB'], app.config["IMAGE_EXTS"],format='dic')
-
-
         session['image_paths_dict']=image_paths
         d=session['image_paths_dict'].keys()
         return render_template('index.html', paths=d,val=image_paths.values())
